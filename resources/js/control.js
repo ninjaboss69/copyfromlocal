@@ -10,7 +10,7 @@ triggerEl.addEventListener("click", function () {
     targetEl.classList.toggle("hidden");
 });
 const deletePost = (id) => {
-    // console.log(id + " will be deleted!");
+    // alert(id + " is deleted");
     const a = "http://127.0.0.1:8000/delete/" + id;
     fetch(a, {
         method: "POST",
@@ -20,8 +20,6 @@ const deletePost = (id) => {
             "Content-Type": "application/json",
         },
     }).then(location.reload());
-    // .then((response) => response.json())
-    // .then((response) => console.log(JSON.stringify(response)));
 };
 const buttons = document.querySelectorAll(".buttons");
 buttons.forEach((button) => {

@@ -64,7 +64,7 @@ class ItemsController extends Controller
         // return [
         //     'message'=>'deleted successfully to '.$id,
         // ];
-        return redirect('/')->with('status','deleted successfully');
+        //return redirect('/')->with('status','deleted successfully');
     }
     return [
         'message'=>'Unknown ID '.$id,
