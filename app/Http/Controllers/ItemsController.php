@@ -22,15 +22,15 @@ class ItemsController extends Controller
     }
 
     public function store(Request $request){ 
-        if($request->hasFile('video')){
-            $tt = $request->file('video')->store('videos','public');
-            $name=$request->file('video')->getClientOriginalName();
-            $extension=$request->file('video')->clientExtension();
+        if($request->hasFile('file')){
+            $tt = $request->file('file')->store('files','public');
+            $name=$request->file('file')->getClientOriginalName();
+            $extension=$request->file('file')->clientExtension();
             Items::create([
                 'name'=>$name,
                 'url'=>$tt,
                 'type'=>$extension,
-                'owner_name'=> $_SERVER['HTTP_USER_AGENT']? substr($_SERVER['HTTP_USER_AGENT'],0,25):'Unknown Device Type',
+                'owner_name'=>'Device',
             ]);
             return back()->with('status','uploaded successfully');
         }else{

@@ -11,8 +11,8 @@
                             <input
                                 type="file"
                                 class="border border-gray-200 rounded p-2 w-full"
-                                name="video"
-                                id="video"
+                                name="file"
+                                id="file"
                                
                             />
                         </div>

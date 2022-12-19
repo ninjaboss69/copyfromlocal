@@ -1,8 +1,9 @@
 <?php
 
 
-use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::post('/download/{id}',[ItemsController::class,'download'])->name('downloa
 
 Route::post('/delete/{id}',[ItemsController::class,'delete'])->name('delete');
 
+Route::get('/about',[Controller::class,'about'])->name('about');
