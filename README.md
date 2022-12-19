@@ -9,3 +9,5 @@ if you want to host through local network, use
 ```
 sudo php artisan serve --host <192.168.1.1> --port 80
 ```
+
+<h4>Why is updating a readme.md file is a contribute, but commit is not?</h4>
