@@ -18,6 +18,12 @@
                         </div>
                     <button class="bg-gray-900 text-white rounded-lg px-12 py-6" type="submit">Submit</button>
                     </form>
+                    <form method="POST" action="/deleteAll" enctype="multipart/form-data" class="p-12">
+                    <button type="submit">
+                        @csrf    
+                    Delete All</button>
+                    </form>
+                    
         </div>
         <div class="px-12 py-12  overflow-y-auto"> 
             @if(count($items)>=1)

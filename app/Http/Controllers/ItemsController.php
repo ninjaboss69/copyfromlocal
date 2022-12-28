@@ -71,5 +71,16 @@ class ItemsController extends Controller
     ];
     }
 
+    public function deleteAll(){
+        $items=Items::latest()->get();
+        foreach($items as $item){
+          Storage::delete('public/'.$item->url);
+          $item->delete();
+
+
+        }
+        return back()->with('status','deleted all successfully');
+    }
+
   
 }

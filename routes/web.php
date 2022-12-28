@@ -25,3 +25,5 @@ Route::post('/download/{id}',[ItemsController::class,'download'])->name('downloa
 Route::post('/delete/{id}',[ItemsController::class,'delete'])->name('delete');
 
 Route::get('/about',[Controller::class,'about'])->name('about');
+
+Route::post('/deleteAll',[ItemsController::class,'deleteAll'])->name('deleteAll');
