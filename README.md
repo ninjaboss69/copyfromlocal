@@ -9,3 +9,9 @@ if you want to host through local network, use
 ```
 sudo php artisan serve --host <192.168.1.1> --port 80
 ```
+
+Run tailwind
+
+```
+npm run dev
+```
